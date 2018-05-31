@@ -1,71 +1,9 @@
+# HTML-CLI （参照[html-bundler](https://www.npmjs.com/package/html-bundler)）
 ## 使用手册
-
-### Globle Mod
-适用于一些较简单的项目
-
-```sh
-npm install html-bundler -g
-```
-
-```sh
-hb create project
-hb create project -w //add webpack.config.js local
-```
-
-
-```sh
-cd project && npm install
-```
-
-
-```sh
-hb dev -p 8080
-```
-
-
-```sh
-hb dest
-```
-
-### Local Mod
-适用于正式项目
-
-```sh
-cd your-project
-npm install html-bundler --save-dev
-```
-
-自动生成html-bundler.config.js
-
-```sh
-npm install html-bundler -g
-hb init
-hb init -w  //自动生成webpack.config.js
-```
-
-create a js file (e.g: bundle.js)and write:
-
-```js
-require('html-bundler')
-
-```
-
-```sh
-node bundle.js dev -p 8080
-```
-
-```sh
-node bundle.js dest
-```
-
-### DLL优化
-需要在webpack.dll.js的vendors中配置业务需要静态化的包，然后执行
-
-```sh
-node webpack.dll.js
-
-```
-执行完成后会生成一个manifest.json文件，每次修改vendors配置后需要重新生成。
+1. npm install html-bundler -g
+2. npm install
+3. hb dev//测试环境运行
+4. hb dest//打包编译
 
 ### 配置文件解析
 ```js
